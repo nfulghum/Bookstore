@@ -58,7 +58,7 @@ router.put("/:isbn", async function (req, res, next) {
         message: "Not allowed"
       });
     }
-    const validation = validate(req.body, bookSchemaUpdate);
+    const validation = jsonschema.validate(req.body, bookSchemaUpdate);
     if (!validation.valid) {
       return next({
         status: 400,
