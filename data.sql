@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS books CASCADE;
+
 CREATE TABLE books (
   isbn TEXT PRIMARY KEY,
   amazon_url TEXT,
